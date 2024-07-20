@@ -1,0 +1,124 @@
+#home {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  
+  margin-top: -2.3em;
+  background-image: linear-gradient(to right, #a9a9a9 50%, #a9a9a9 50%);
+  border-radius: 10px;
+  position: relative; /* Position relative pour positionner les étincelles */
+  overflow: hidden; /* Cache les éléments qui débordent */
+}
+
+
+
+
+.step1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.presentation {
+  text-align: center; 
+  margin-left: 5em;
+}
+
+.presentation h1 {
+  font-size: 3rem;
+  transition: transform 0.3s ease; /* Ajoute une transition pour le titre */
+}
+
+.presentation h2 {
+  font-size: 1.7rem;
+  transition: transform 0.3s ease; /* Ajoute une transition pour le sous-titre */
+}
+.presentation h2 span {
+color:#F5DEB3;
+font-weight: bold;
+border-bottom: 3px solid #F5DEB3; /* Bordure sous le texte */
+  padding-bottom: 1em; /* Espace entre le texte et la bordure */
+}
+
+.presentation p {
+  font-size: 1.3rem;
+  margin: 2.15rem 0;
+  padding: 0.5rem;
+  border-radius: 20px;
+  margin-top: 3em;
+  background-color: #F5DEB3;
+  transition: transform 0.3s ease; /* Ajoute une transition pour les paragraphes */
+}
+
+.presentation p:hover {
+  transform: translateY(-5px); /* Déplace légèrement vers le haut au survol */
+}
+
+.presentation h1:hover,
+.presentation h2:hover {
+  transform: translateX(5px); /* Déplace légèrement vers la droite au survol */
+}
+.imgmoi {
+  position: relative; /* Position relative pour que la superposition soit relative à ce conteneur */
+
+  margin-top: 2em;
+  margin-left: 4.2em;
+ width: 20em; /* Assure que le conteneur de l'image est carré */
+  height: 24em; /* Assure que le conteneur de l'image est carré */
+  overflow: hidden; /* Cache les parties de l'image qui débordent */
+  border-radius: 10px; /* Arrondit les coins du conteneur */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation de transformation et d'ombre portée */
+}
+
+.imgmoi::before {
+  content: ""; /* Ajoute un pseudo-élément pour créer la superposition */
+  position: absolute; /* Position absolue par rapport au conteneur parent */
+  top: 0;
+  left: 0;
+  width: 100%; /* Assure que la superposition occupe toute la largeur */
+  height: 100%; /* Assure que la superposition occupe toute la hauteur */
+  background-color: rgba(0, 0, 0, 0.3); /* Couleur de fond semi-transparente */
+  border-radius: 10px; /* Arrondit les coins de la superposition */
+  transition: opacity 0.3s ease; /* Animation de l'opacité de la superposition */
+}
+
+.imgmoi img {
+  width: 100%; /* Assure que l'image occupe toute la largeur du conteneur */
+  height: 24em; /* Assure que l'image occupe toute la hauteur du conteneur */
+  object-fit: cover; /* Coupe l'image pour remplir le conteneur en maintenant le rapport d'aspect */
+  border-radius: 10px; /* Arrondit les coins de l'image */
+  
+}
+.imgmoi:hover {
+  transform: scale(1.02); /* Légère agrandissement lors du survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+}
+
+.quote-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #F5DEB3;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-right: 2em;
+}
+
+.quote-text {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.quote-author {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}

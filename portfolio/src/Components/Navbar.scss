@@ -1,0 +1,42 @@
+
+.logo img {
+    width: 180px;
+    height: 60px;
+    margin-left: 2em;
+   
+   margin-top: -0.5em;
+   
+}
+.linked{
+    margin-top: 0.7em;
+}
+
+.linked img{
+    width: 30px;
+    height: 30px;
+    margin-top: -9em;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 10em;
+    margin-top: -1.5em;
+    
+   
+}
+ .logo {
+    margin-left: -0.75em;
+    margin-right: 0.3em;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0; // Suppression du padding par défaut
+}
+
+li {
+    margin-right: 2.625em;
+font-size: 20px;}

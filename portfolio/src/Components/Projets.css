@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 4em;
+    width: 75em;
+   background-color: #a9a9a9;
+   border: 0.063em solid  #a9a9a9;
+   border-radius: 1.25em;
+   margin-top: 3em;
+
+}
+
+.card {
+    width: 40%;
+    margin: 1em 0;
+    position: relative;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card-image {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.card-image .overlay .text {
+    margin-bottom: 1em;
+}
+
+.card-image .overlay .links a {
+    color: #F5DEB3; /* Couleur des liens */
+    text-decoration: none;
+    margin: 0.5em;
+    padding: 0.5em 1em;
+    border: 2px solid #F5DEB3; /* Bordure des liens */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-image .overlay .links a:hover {
+    background-color: #F5DEB3; /* Couleur de fond au survol */
+    color: #333; /* Couleur du texte au survol */
+}
+
+.card-image:hover .overlay {
+    opacity: 1;
+}
+
+.card h3 {
+    margin-top: 1em;
+    color: #333;
+}
+.title {
+    margin-top: 5em;
+}

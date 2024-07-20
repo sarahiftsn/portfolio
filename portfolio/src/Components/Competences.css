@@ -1,0 +1,53 @@
+#Comp  {
+    display: flex;
+    flex-wrap: nowrap;
+   justify-content: space-around;
+    margin-top: 6em;
+    width: 80em;
+    
+
+
+}
+.title{
+    display: inline-block;
+    margin-top: 2em;
+    align-items: center;
+    margin-left: 13em;
+    font-size: 2.5em;
+    border-bottom: 5px solid #A9A9A9; /* Bordure sous le texte */
+    padding-bottom: 40px;
+
+}
+
+.html{
+    width: 100px;
+    height: 100px;
+}
+.imageSmall{
+    width:100px ;
+    height: 100px;
+}
+.imageContainer {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+
+.dropdown {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    font-size: 1.5em;
+    transform: translateX(-50%);
+    background-color: #a9a9a9;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 4em;
+}
