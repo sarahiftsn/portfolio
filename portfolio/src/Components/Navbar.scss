@@ -40,3 +40,67 @@ nav {
 li {
     margin-right: 2.625em;
 font-size: 20px;}
+/* Media queries pour les écrans de taille mobile */
+/* Media queries pour les écrans de taille mobile */
+@media (max-width: 768px) {
+    .logo img {
+        width: 100px; /* Réduit la largeur pour les petits écrans */
+        height: 40px; /* Réduit la hauteur proportionnellement */
+        margin-left: auto;
+        margin-right: auto;
+        display: block; /* Centre le logo horizontalement */
+        margin-top: 0; /* Réinitialise la marge supérieure */
+        margin: 0%;
+    }
+
+    .linked {
+        margin-top: 1em; /* Ajuste le margin-top pour un meilleur affichage sur mobile */
+    }
+
+    .linked img {
+        width: 24px; /* Réduit la taille des icônes pour les petits écrans */
+        height: 24px;
+        margin-top: 0;
+    }
+
+    nav {
+        flex-direction: column; /* Change la direction en colonne pour les petits écrans */
+        align-items: center; /* Centre le contenu horizontalement */
+        height: auto; /* Ajuste la hauteur automatiquement */
+        margin-top: 0; /* Réinitialise la marge */
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row; /* Dispose les éléments en ligne */
+        justify-content: center; /* Centre les éléments horizontalement */
+        gap: 0; /* Supprime l'espace entre les éléments */
+        padding: 0; /* Supprime le padding */
+        width: 100%; /* Utilise toute la largeur disponible */
+        margin-top: 0; /* Réinitialise la marge */
+    }
+
+    li {
+        margin-right: 0; /* Supprime les marges droite */
+        margin-left: 0; /* Supprime les marges gauche */
+        font-size: 15px; /* Réduit la taille de la police pour les petits écrans */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 100px; /* Réduit encore la largeur pour les très petits écrans */
+        height: 30px;
+        margin: 0;
+    }
+
+    .linked img {
+        width: 20px; /* Réduit encore la taille des icônes pour les très petits écrans */
+        height: 20px;
+        margin: 0%;
+    }
+
+    .nav-menu li {
+        font-size: 12px; /* Réduit encore la taille de la police pour les très petits écrans */
+    }
+}

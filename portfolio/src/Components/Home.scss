@@ -122,3 +122,58 @@ border-bottom: 3px solid #F5DEB3; /* Bordure sous le texte */
   color: #333;
   margin-top: 10px;
 }
+/* Media queries pour les écrans de taille mobile */
+@media (max-width: 768px) {
+  #home {
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
+    margin-top: 0;
+    height: auto;
+    padding: 1em;
+    background-image: linear-gradient(to right, #a9a9a9 50%, #a9a9a9 50%);
+  }
+
+  .step1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .presentation {
+    margin-left: 0;
+    margin-right: 1em;
+  }
+
+  .presentation h1 {
+    font-size: 2.5rem;
+  }
+
+  .presentation h2 {
+    font-size: 1.5rem;
+  }
+
+  .presentation p {
+    font-size: 1.1rem;
+    margin-top: 1em;
+    padding: 0.5rem;
+  }
+
+  .imgmoi {
+    margin-top: 1em;
+    margin-left: 0;
+    width: 60%;
+    height: auto;
+    margin-right: 0;
+  }
+
+  .imgmoi img {
+    height: auto;
+    margin: 0;
+  }
+
+  .quote-container {
+   margin-top: 1em;
+    padding: 10px;
+    max-width: 100%;
+  }
+}

@@ -52,3 +52,68 @@
     margin: 0;
     color: #555; /* Couleur des droits d'auteur */
 }
+/* Media queries pour les écrans de taille mobile */
+@media (max-width: 768px) {
+    .footer {
+      padding: 1em 0.5em; /* Réduis le padding */
+      margin-top: 4em; /* Réduis la marge supérieure */
+      max-width: 100%;
+    }
+  
+    .footer-content {
+      max-width: 80%; /* Réduis la largeur maximale */
+    }
+  
+    .footer-content h2 {
+      font-size: 1.5em; /* Réduis la taille de la police du titre */
+    }
+  
+    .footer-content p {
+      font-size: 1em; /* Réduis la taille de la police du texte secondaire */
+    }
+  
+    .footer-links {
+      margin: 0.5em 0; /* Réduis la marge */
+    }
+  
+    .footer-links a {
+      font-size: 0.9em; /* Réduis la taille de la police des liens */
+      margin: 0 0.5em; /* Réduis la marge des liens */
+    }
+  
+    .footer-bottom {
+      font-size: 0.8em; /* Réduis la taille de la police des droits d'auteur */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 0.5em 0.25em; /* Réduis encore le padding */
+      margin-top: 3em; /* Réduis encore la marge supérieure */
+    }
+  
+    .footer-content {
+      max-width: 95%; /* Réduis encore la largeur maximale */
+    }
+  
+    .footer-content h2 {
+      font-size: 1.2em; /* Réduis encore la taille de la police du titre */
+    }
+  
+    .footer-content p {
+      font-size: 0.9em; /* Réduis encore la taille de la police du texte secondaire */
+    }
+  
+    .footer-links {
+      margin: 0.25em 0; /* Réduis encore la marge */
+    }
+  
+    .footer-links a {
+      font-size: 0.8em; /* Réduis encore la taille de la police des liens */
+      margin: 0 0.25em; /* Réduis encore la marge des liens */
+    }
+  
+    .footer-bottom {
+      font-size: 0.7em; /* Réduis encore la taille de la police des droits d'auteur */
+    }
+  }

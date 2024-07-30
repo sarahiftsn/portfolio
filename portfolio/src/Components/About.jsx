@@ -16,7 +16,9 @@ const About = () => {
           <p>
             Guidée par cette nouvelle passion, j'ai décidé de suivre une formation de développeuse web chez OpenClassrooms. Grâce à cette formation, j'ai acquis des compétences solides en développement web et j'ai affiné ma capacité à résoudre des problèmes complexes à travers la programmation. Aujourd'hui, je combine mes compétences linguistiques et informatiques pour créer des expériences numériques riches et accessibles à tous.
           </p>
+          <div className="button-container">
           <button> Mon CV</button>
+          </div>
         </div>
       </div>
     </div>
