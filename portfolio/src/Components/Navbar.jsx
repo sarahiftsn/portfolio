@@ -4,49 +4,36 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     return (
-        
-            <header>
+        <header>
             <nav className="nav">
-          
-              <div className="logo">
-                <img src='Sarah Iftissene.png'  alt="Logo" />
-                
-              </div>
-            
-              <ul className="nav-menu">
-                <li className="li">
-               
-                  Accueil
-                  
-                  </li>
-                <li className="li">
-                
-                    À propos
-                    
-                  </li>
-                  <li className="li">
-                
-                    Compétences
-                    
-                  </li>
-                  <li className="li">
-                
-                    Portfolio
-                    
-                  </li>
-                  <li className="li">
-                
-                    Contact
-                    
-                  </li>
-            <div className='linked'>
-              <img src='linkedin.png'  alt="Logo" />
-              </div>
+                <div className="logo">
+                    <img src='Sarah Iftissene.png' alt="Logo" />
+                </div>
+                <ul className="nav-menu">
+                    <li className="li">
+                        <a href="#home">Accueil</a>
+                    </li>
+                    <li className="li">
+                        <a href="#about">À propos</a>
+                    </li>
+                    <li className="li">
+                        <a href="#competences">Compétences</a>
+                    </li>
+                    <li className="li">
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li className="li">
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <div className='linked'>
+                    <a href="https://www.linkedin.com/in/sarah-i-33b3a216b/" target="_blank" rel="noopener noreferrer">
+                        <img src='linkedin.png' alt="Logo" />
+                        </a>
+                    </div>
                 </ul>
-              
             </nav>
-            </header>
+        </header>
     );
-  };
-  
-  export default Navbar;
+};
+
+export default Navbar;

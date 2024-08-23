@@ -1,23 +1,15 @@
-/* App.css */
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1em;
-    overflow: hidden;
-  }
-  
-  /* Media queries pour les écrans de taille mobile */
-  @media (max-width: 768px) {
-    .container {
-      max-width: 80%; /* Utilise toute la largeur disponible sur les petits écrans */
-      padding: 0 1em; /* Ajuste le padding pour les petits écrans */
-     overflow: hidden;
-    }
-  }
+/* Assure un défilement fluide vers les éléments d'ancrage */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Style des liens dans le menu de navigation */
+.nav-menu a {
+  text-decoration: none;
+  color: #333; /* Couleur du texte */
+}
+
+/* Style des liens au survol */
+.nav-menu a:hover {
+  color: #007bff; /* Couleur de survol */
+}

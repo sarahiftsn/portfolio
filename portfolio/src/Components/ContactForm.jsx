@@ -1,3 +1,4 @@
+// src/Components/ContactForm.js
 import React, { useState } from 'react';
 import './ContactForm.css';
 
@@ -18,10 +19,35 @@ const ContactForm = () => {
         });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Handle form submission logic here
-        alert('Form submitted!');
+
+        try {
+            const response = await fetch('http://localhost:5000/api/contact', { // Remplacez par l'URL de votre API
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const result = await response.json();
+            if (result.success) {
+                alert('Votre message a été envoyé avec succès!');
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    subject: '',
+                    message: ''
+                });
+            } else {
+                alert('Une erreur est survenue. Veuillez réessayer.');
+            }
+        } catch (error) {
+            console.error('Erreur lors de l\'envoi du message:', error);
+            alert('Une erreur est survenue. Veuillez réessayer.');
+        }
     };
 
     return (

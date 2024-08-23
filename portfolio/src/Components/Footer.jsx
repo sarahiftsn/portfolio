@@ -10,9 +10,9 @@ const Footer = () => {
                     <p>Développeuse Web</p>
                 </div>
                 <div className="footer-links">
-                    <a href="mailto:sarah.iftissene@example.com">Email</a>
-                    <a href="https://www.linkedin.com/in/sarah-iftissene/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="https://github.com/sarahiftissene" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="mailto:iftissenesarah4@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/sarah-i-33b3a216b/"target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/sarahiftsn" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
                 <div className="footer-bottom">
                     <p>&copy; {new Date().getFullYear()} Sarah Iftissene. Tous droits réservés.</p>

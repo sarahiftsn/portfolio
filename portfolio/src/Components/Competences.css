@@ -33,75 +33,49 @@
     margin: 10px;
     cursor: pointer;
 }
-
-
-
 .dropdown {
-    position: absolute;
-    top: 110%;
-    left: 50%;
-    font-size: 1.5em;
-    transform: translateX(-50%);
-    background-color: #a9a9a9;
-    min-width: 200px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
-    padding: 12px 16px;
-    z-index: 1;
-    border-radius: 4px;
-    text-align: center;
-    margin-bottom: 4em;
+    position: absolute; /* Positionne le dropdown relativement à .imageContainer */
+    top: 100%; /* Affiche le dropdown en dessous de l'image */
+    left: 0; /* Aligne le dropdown avec le bord gauche de l'image */
+    background-color: white; /* Couleur de fond du dropdown */
+    border: 1px solid #ddd; /* Bordure du dropdown */
+    padding: 10px; /* Espacement intérieur du dropdown */
+    width: 200px; /* Largeur du dropdown */
+    z-index: 10; /* Assure que le dropdown apparaît au-dessus des autres éléments */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre pour un meilleur contraste */
+    display: block; /* Affiche le dropdown */
 }
-/* Media queries pour les écrans de taille mobile */
-@media (max-width: 768px) {
+
+/* Styles pour les écrans mobiles */
+@media (max-width: 1208px) {
     #Comp {
-        flex-direction: column; /* Dispose les éléments en colonne */
-        align-items: center; /* Centre les éléments horizontalement */
-        width: 100%; /* Utilise toute la largeur disponible */
-        margin-top: 2em; /* Réduit la marge supérieure */
+        display: flex;
+        flex-direction: column; /* Changer l'alignement en colonne */
+        width: 100%; /* Prendre toute la largeur de l'écran */
+        margin-top: 3em; /* Réduire l'espace au-dessus si nécessaire */
     }
 
     .title {
-        margin-left: 0; /* Réinitialise la marge gauche */
-        font-size: 2em; /* Réduit la taille de la police pour les petits écrans */
-        padding-bottom: 20px; /* Réduit l'espace sous le titre */
+        font-size: 2em; /* Réduire la taille du texte sur les petits écrans */
+        padding-bottom: 20px; /* Ajuster la taille du padding */
+        margin: 0;
     }
 
     .html, .imageSmall {
-        width: 80px; /* Réduit la taille des images */
+        width: 80px; /* Réduire la taille des images pour les petits écrans */
         height: 80px;
+        margin: 0%;
     }
 
     .imageContainer {
-        margin: 5px; /* Réduit la marge entre les éléments */
+        margin: 5px; /* Réduire les marges pour mieux s'adapter aux petits écrans */
+        margin: 0%;
     }
 
     .dropdown {
-        font-size: 1.2em; /* Réduit la taille de la police pour les petits écrans */
-        min-width: 150px; /* Réduit la largeur minimale */
-        padding: 8px 12px; /* Réduit le padding */
-        margin-bottom: 2em; /* Réduit la marge inférieure */
+        width: 100%; /* Ajuster la largeur du dropdown pour les petits écrans */
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Réduire l'ombre pour les petits écrans */
     }
 }
 
-@media (max-width: 480px) {
-    .title {
-        font-size: 1.5em; /* Réduit encore la taille de la police */
-        padding-bottom: 10px; /* Réduit davantage l'espace sous le titre */
-    }
 
-    .html, .imageSmall {
-        width: 60px; /* Réduit encore la taille des images */
-        height: 60px;
-    }
-
-    .imageContainer {
-        margin: 3px; /* Réduit davantage la marge entre les éléments */
-    }
-
-    .dropdown {
-        font-size: 1em; /* Réduit encore la taille de la police */
-        min-width: 120px; /* Réduit encore la largeur minimale */
-        padding: 6px 10px; /* Réduit encore le padding */
-        margin-bottom: 1em; /* Réduit encore la marge inférieure */
-    }
-}

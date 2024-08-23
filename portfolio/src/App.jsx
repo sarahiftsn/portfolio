@@ -6,17 +6,30 @@ import Comp from "./Components/Competences";
 import ContactForm from "./Components/ContactForm";
 import Footer from "./Components/Footer";
 import Projets from "./Components/Projets";
-import './App.css';  // Importez le fichier CSS global
+import './App.css';
+import './App.css';
+import { BrowserRouter as Router } from 'react-router-dom';
+
 
 const App = () => {
   return (
     <div className="container">
       <Navbar />
-      <Home />
-      <About />
-      <Comp />
-      <Projets />
-      <ContactForm />
+      <section id="home">
+        <Home />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="competences">
+        <Comp />
+      </section>
+      <section id="portfolio">
+        <Projets />
+      </section>
+      <section id="contact">
+        <ContactForm />
+      </section>
       <Footer />
     </div>
   );

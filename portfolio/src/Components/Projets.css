@@ -83,13 +83,13 @@
     .projects {
         flex-direction: column; /* Dispose les cartes en colonne */
         align-items: center; /* Centre les cartes horizontalement */
-        padding: 2em; /* Réduit le padding */
+        padding: 0em; /* Réduit le padding */
         width: 100%; /* Utilise toute la largeur disponible */
     }
 
     .card {
         width: 80%; /* Les cartes occupent toute la largeur disponible */
-        margin: 1em 0; /* Réduit les marges */
+        margin: 0em 0; /* Réduit les marges */
     }
 
     .card-image {
@@ -101,21 +101,3 @@
     }
 }
 
-@media (max-width: 480px) {
-    .projects {
-        padding: 1em; /* Réduit encore le padding */
-    }
-
-    .card {
-        width: 100%; /* Les cartes occupent toute la largeur disponible */
-        margin: 0.5em 0; /* Réduit les marges */
-    }
-
-    .card-image {
-        height: 150px; /* Réduit la hauteur des images pour les très petits écrans */
-    }
-
-    .card h3 {
-        font-size: 1em; /* Réduit encore la taille du texte */
-    }
-}

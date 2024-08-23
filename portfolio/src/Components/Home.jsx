@@ -1,5 +1,5 @@
 import React from "react";
-import './Home.scss'; 
+import './Home.css'; 
 import { FaHome, FaPhone } from 'react-icons/fa';
 import About from "./About";
 import Comp from "./Competences";
@@ -13,9 +13,7 @@ const Home = () => {
                     <h2> <span>Développeuse</span> web</h2>
                     <p>VOIR MON PORTFOLIO</p>
                 </div>
-                <div className="imgmoi">
-                    <img src='80al.gif' alt="Logo" />
-                </div>
+                
                 <div className="quote-container">
                     <blockquote className="quote-text">
                         "Web development is not just about making websites, it's about sculpting the digital experience."
