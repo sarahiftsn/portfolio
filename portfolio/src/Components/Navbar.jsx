@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
-import './Navbar.css'; // Importer le fichier CSS ou SCSS
+import React, { useEffect, useState } from 'react';
+import './Navbar.css'; // Import the CSS file
 
 const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll('section');
@@ -20,9 +22,9 @@ const Navbar = () => {
 
       navLinks.forEach((link) => {
         if (link.getAttribute('href').includes(currentSectionId)) {
-          link.classList.add('active'); // Ajoute la classe active à l'élément en cours
+          link.classList.add('active');
         } else {
-          link.classList.remove('active'); // Supprime la classe active des autres éléments
+          link.classList.remove('active');
         }
       });
     };
@@ -34,13 +36,23 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleMenuToggle = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <header>
       <nav className="nav">
         <div className="logo">
           <img src='Sarah Iftissene.png' alt="Logo" />
         </div>
-        <ul className="nav-menu">
+
+        {/* Button for mobile menu toggle */}
+        <div className="menu-toggle" onClick={handleMenuToggle}>
+          <span className="hamburger"></span>
+        </div>
+
+        <ul className={`nav-menu ${isMobileMenuOpen ? 'open' : ''}`}>
           <li className="li">
             <a href="#home">Accueil</a>
           </li>

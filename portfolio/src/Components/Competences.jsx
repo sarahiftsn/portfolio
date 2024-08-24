@@ -1,47 +1,41 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Competences.css';
 
 const Comp = () => {
     const [selectedImage, setSelectedImage] = useState(null);
-    const dropdownRef = useRef(null);
 
     const handleClick = (definition) => {
         setSelectedImage(selectedImage === definition ? null : definition);
     };
 
-    useEffect(() => {
-        if (dropdownRef.current) {
-            const dropdown = dropdownRef.current;
-            const rect = dropdown.getBoundingClientRect();
-            if (rect.bottom > window.innerHeight) {
-                dropdown.style.top = 'auto';
-                dropdown.style.bottom = '100%';
-                dropdown.style.maxHeight = '200px'; // Limite la hauteur maximale
-                dropdown.style.overflowY = 'auto'; // Ajoute une barre de défilement si nécessaire
-            }
-        }
-    }, [selectedImage]);
-
     return (
         <>
-         <div className='titlecontainer'>
-            <h1 className="title1">Compétences</h1>
+            <div className='titlecontainer'>
+                <h1 className="title1">Compétences</h1>
             </div>
             <div id="Comp">
                 {[
-                    { name: 'react', src: 'react.png', description: 'React est une bibliothèque JavaScript pour construire des interfaces utilisateur.' },
-                    { name: 'html', src: 'html.png', description: 'HTML est le langage de balisage standard pour les documents conçus pour être affichés dans un navigateur web.' },
-                    { name: 'figma', src: 'figma.png', description: 'Figma est un éditeur de graphiques vectoriels et un outil de prototypage.' },
-                    { name: 'github', src: 'github.png', description: 'GitHub est une plateforme de développement collaboratif pour héberger et réviser du code.' },
-                    { name: 'javascript', src: 'Js.png', description: 'JavaScript est un langage de programmation qui permet de créer du contenu web interactif.' }
+                    { name: 'react', src: 'react.png', description: 'React', progress: 90 },
+                    { name: 'html', src: 'html.png', description: 'HTML ', progress: 95 },
+                    { name: 'figma', src: 'figma.png', description: 'Figma ', progress: 85 },
+                    { name: 'github', src: 'github.png', description: 'GitHub ', progress: 80 },
+                    { name: 'javascript', src: 'Js.png', description: 'JavaScript  ', progress: 70 }
                 ].map((item) => (
-                    <div className="imageContainer" key={item.name}>
-                        <img src={item.src} alt={item.name} className="imageSmall" onClick={() => handleClick(item.name)} />
-                        {selectedImage === item.name && (
-                            <div className="dropdown" ref={dropdownRef}>
-                                {item.description}
+                    <div className="competenceContainer" key={item.name}>
+                        <div className="imageContainer" onClick={() => handleClick(item.name)}>
+                            <img src={item.src} alt={item.name} className={`imageSmall ${selectedImage === item.name ? 'selected' : ''}`} />
+                            {selectedImage === item.name && (
+                                <div className="description">
+                                    {item.description}
+                                </div>
+                            )}
+                        </div>
+                        {/* Progress Bar for Each Competence */}
+                        <div className="progressContainer">
+                            <div className="progressBar" style={{ width: `${item.progress}%` }}>
+                                <span className="progressText">{item.progress}%</span>
                             </div>
-                        )}
+                        </div>
                     </div>
                 ))}
             </div>

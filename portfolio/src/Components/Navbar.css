@@ -1,11 +1,11 @@
-/* Styles de base pour les écrans larges */
+/* Base styles for wide screens (Desktop) */
 header {
-  position: fixed; /* Fixe la navbar en haut de la page */
+  position: fixed;
   width: 100%;
   top: 0;
-  background-color: white; /* Couleur de fond de la navbar */
-  z-index: 1000; /* S'assurer que la navbar est au-dessus du contenu */
-  transition: top 0.3s; /* Transition fluide lors du défilement */
+  background-color: white;
+  z-index: 1000;
+  transition: top 0.3s;
 }
 
 .nav {
@@ -15,7 +15,7 @@ header {
   align-items: center;
   height: 5em;
   margin-top: -1.5em;
-  padding: 0 2em; /* Ajouter du padding pour espacer les éléments */
+  padding: 0 2em;
 }
 
 .logo img {
@@ -49,49 +49,88 @@ header {
 }
 
 .li a {
-  color: #a9a9a9; /* Couleur par défaut pour les liens */
+  color: #a9a9a9;
   text-decoration: none;
   padding: 10px 15px;
-  transition: background-color 0.3s, color 0.3s; /* Transition pour un effet de hover */
+  transition: background-color 0.3s, color 0.3s;
 }
 
-/* Style de l'élément actif */
+/* Active link styles */
 .li a.active { 
-  background-color: #F5DEB3; /* Couleur de fond lorsque l'élément est actif */
+  background-color: #F5DEB3;
   border-radius: 5px;
 }
 
-/* Toujours visible et change la couleur lors du hover */
+/* Hover effect */
 .li a:hover {
-  background-color: #F5DEB3; /* Couleur lors du survol */
+  background-color: #F5DEB3;
   border-radius: 5px;
   color: black;
 }
 
-/* Styles pour les écrans mobiles */
-@media (max-width: 900px) {
-  .logo img {
-    margin: 0;
+/* Mobile-specific styles */
+@media (max-width: 1098px) {
+  .nav {
+    flex-direction: row; /* Keep elements in a row */
+    justify-content: space-between; /* Space between logo and toggle */
+    align-items: center
+    height: auto;
+    padding: 0 3em;
+    margin-top: 2em;
   }
 
-  .nav {
-    display: flex;
-    flex-direction: column;
-    height: auto; /* Ajuster la hauteur pour un affichage vertical */
-    margin: 0;
-    padding: 1em;
+  .menu-toggle {
+    display: block; /* Show the toggle button on mobile */
+    cursor: pointer;
+  }
+
+  .hamburger {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    position: relative;
+    margin: 0.5em 0;
+  }
+
+  .hamburger::before,
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+  }
+
+  .hamburger::before {
+    top: -10px;
+  }
+
+  .hamburger::after {
+    bottom: -10px;
   }
 
   .nav-menu {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    flex-wrap: wrap;
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    position: absolute;
+    top: 5em;
+    left: 0;
+  }
+
+  .nav-menu.open {
+    display: flex; /* Show menu when open */
   }
 
   .li {
-    margin: 0.5em 0; /* Espacement entre les éléments de menu */
-    font-size: 18px; /* Ajustement de la taille de la police pour les mobiles */
+    margin: 0.5em 0;
+    font-size: 18px;
+  }
+  .logo img {
+    
+    margin-left: -2em;
+    
   }
 }

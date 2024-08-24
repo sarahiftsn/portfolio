@@ -6,10 +6,9 @@ import Comp from "./Components/Competences";
 import ContactForm from "./Components/ContactForm";
 import Footer from "./Components/Footer";
 import Projets from "./Components/Projets";
-import './App.css';
+import BackToTop from "./Components/BackToTop"; // Import the BackToTop component
 import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom';
-
 
 const App = () => {
   return (
@@ -31,6 +30,7 @@ const App = () => {
         <ContactForm />
       </section>
       <Footer />
+      <BackToTop /> {/* Add the BackToTop component here */}
     </div>
   );
 };
