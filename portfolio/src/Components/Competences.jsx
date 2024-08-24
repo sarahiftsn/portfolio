@@ -24,7 +24,9 @@ const Comp = () => {
 
     return (
         <>
-            <h1 className="title">Compétences</h1>
+         <div className='titlecontainer'>
+            <h1 className="title1">Compétences</h1>
+            </div>
             <div id="Comp">
                 {[
                     { name: 'react', src: 'react.png', description: 'React est une bibliothèque JavaScript pour construire des interfaces utilisateur.' },

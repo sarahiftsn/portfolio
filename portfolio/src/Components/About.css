@@ -60,4 +60,29 @@
       max-width: 100%;
       overflow: hidden;
     }
+    #about .apropos .profile-pic {
+      border-radius: 60%;
+      width: 40%;
+      height: 210px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 600px) {
+    #about .apropos .profile-pic {
+      border-radius: 50%;
+      width: 50%;
+      height: 210px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+  }
+  @media (max-width: 500px) {
+    #about .apropos .profile-pic {
+      width: 60%;
+    }
+    #about .apropos .me p {
+      font-size: 1.2em;
+     
+    }
   }

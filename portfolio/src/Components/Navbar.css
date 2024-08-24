@@ -1,0 +1,97 @@
+/* Styles de base pour les écrans larges */
+header {
+  position: fixed; /* Fixe la navbar en haut de la page */
+  width: 100%;
+  top: 0;
+  background-color: white; /* Couleur de fond de la navbar */
+  z-index: 1000; /* S'assurer que la navbar est au-dessus du contenu */
+  transition: top 0.3s; /* Transition fluide lors du défilement */
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 5em;
+  margin-top: -1.5em;
+  padding: 0 2em; /* Ajouter du padding pour espacer les éléments */
+}
+
+.logo img {
+  width: 180px;
+  height: 60px;
+  margin-left: 2em;
+  margin-top: 0.5em;
+}
+
+.linked {
+  margin-top: 0.9em;
+}
+
+.linked img {
+  width: 30px;
+  height: 30px;
+  margin-top: -10em;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.li {
+  margin-right: 2.625em;
+  font-size: 20px;
+}
+
+.li a {
+  color: #a9a9a9; /* Couleur par défaut pour les liens */
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background-color 0.3s, color 0.3s; /* Transition pour un effet de hover */
+}
+
+/* Style de l'élément actif */
+.li a.active { 
+  background-color: #F5DEB3; /* Couleur de fond lorsque l'élément est actif */
+  border-radius: 5px;
+}
+
+/* Toujours visible et change la couleur lors du hover */
+.li a:hover {
+  background-color: #F5DEB3; /* Couleur lors du survol */
+  border-radius: 5px;
+  color: black;
+}
+
+/* Styles pour les écrans mobiles */
+@media (max-width: 900px) {
+  .logo img {
+    margin: 0;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Ajuster la hauteur pour un affichage vertical */
+    margin: 0;
+    padding: 1em;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .li {
+    margin: 0.5em 0; /* Espacement entre les éléments de menu */
+    font-size: 18px; /* Ajustement de la taille de la police pour les mobiles */
+  }
+}
