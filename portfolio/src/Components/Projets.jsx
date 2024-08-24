@@ -14,7 +14,7 @@ const projects = [
         description: 'Après avoir terminé un projet en avance, j\'ai été intégré à l\'équipe Front-end d\’ArchWebos pour travailler sur le site portfolio d\’une architecte d\’intérieur. Lors de mon premier brief d\’équipe, j\'ai reçu un e-mail de Charlotte, la cheffe de projet, avec le design Figma, le code back-end, le code front-end statique, et le Kanban des tâches. J\'ai alors développé la page de présentation des travaux à partir du HTML fourni, créé la page de connexion pour l\'administrateur, et codé la modale permettant d\'uploader de nouveaux médias. J\'ai ainsi contribué avec succès à ce projet.',
         image: 'sophie.webp',
         codeLink: 'https://github.com/sarahiftsn/Portfolio-architecte-sophie-bluel',
-        siteLink: 'https://projet2.com'
+        
     },
     {
         title: 'Nina Carducci',
